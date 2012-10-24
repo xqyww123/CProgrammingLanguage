@@ -18,9 +18,22 @@ int main(void)
     if(m % 2 != 0) m = m + 1;
     if(m >= 6){
 		/*---------*/
+        k = 0;
     	for (i = m; i <= n; i += 2)
     	{
-
+            
+            if (k == 5 )
+            {
+                printf("\n");
+                k = 0;
+            }
+            for (j = 2; j <= i / 2; ++j)
+                if (check_num(j) && check_num(i - j))
+                {
+                    printf("%d=%d+%d ", i, j, i - j);
+                    break;
+                }
+            ++k;
     	}
     }
 }
