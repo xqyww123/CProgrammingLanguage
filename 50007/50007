@@ -1,0 +1,22 @@
+#include "stdio.h"
+int p3(int x)
+{
+	return x*x*x;
+}
+int main(void)
+{
+    int i, m, n;
+    int repeat, ri;
+    int is(int number); 
+  
+    scanf("%d", &repeat);
+    for(ri = 1; ri <= repeat; ri++){
+        scanf("%d%d", &m, &n);
+        printf("result:\n");
+	for (i=m;i<=n;++i)
+		if (p3(i%10) + p3((i/10)%10) + p3((i/100)%10) == i)
+			printf("%d\n", i);
+    }
+}
+
+/*---------*/
